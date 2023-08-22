@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "errors.h": "c",
+        "stdlib.h": "c",
+        "malloc.h": "c",
+        "stdio.h": "c"
+    }
+}
