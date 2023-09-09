@@ -5,7 +5,7 @@ public class Main {
         // same folders need not import things
         Human yogesh = new Human(21,"yogesh" , 9000 , true);
         Human singla = new Human(20 , "singla" , 5000 , false);
-
+        yogesh.greet();
         System.out.println(Human.population);
         System.out.println(singla.population);
         // this shows 2 instances of Human class has been declared every time it is created
@@ -16,6 +16,8 @@ public class Main {
         Main obj = new Main();
         obj.greeting(); // this is allowed but not really used
 
+        // cannot define another method in method
+        // only main method is run hence all functions should be  outside it
     }
 
     void greeting (){

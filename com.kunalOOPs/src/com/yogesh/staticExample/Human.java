@@ -19,5 +19,9 @@ public class Human {
         // it is like a parameter to complete class
     }
 
+    void greet () {
+        System.out.println("hello");
+    }
+
 
 }
