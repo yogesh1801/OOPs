@@ -1,7 +1,7 @@
 abstract class AbstractRecord {
   abstract public Object key(); //  Object keyword just says keys() is of type Object method (any object)
   abstract public Object value();
-  abstract public Comparison compare(AbstractRecord another); // Here compare is a object of type Comparison defined in another class
+  abstract public Comparison compare(AbstractRecord another); // Here compare is an object of type Comparison defined in another class
     // This should return PREDECESSOR if the comparison puts this before another
     //                    MATCHING if neither can be put before the other
     //                    SUCCESSOR if another comes before this

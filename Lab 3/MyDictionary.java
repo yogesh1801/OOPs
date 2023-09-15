@@ -1,6 +1,6 @@
 class MyDictionary {
 	// Main Driver Method (optional in our modular design)
-	public static void main(String args[]) { // Used to ensure that the user does not use the class directly. Why is
+	public static void main(String[] args) { // Used to ensure that the user does not use the class directly. Why is
 												// this done?
 		System.out.println(
 				"The best way to use this type is to run another app main and instantiate a dictionary in it.");
@@ -9,24 +9,30 @@ class MyDictionary {
 	// Where is the data stored? How is it stored?
 	// Where is Record defined?
 	private Record[] records; // Why is this private? Would it work if it were public? Why?
+	// Private means this can be only accessed by MyDictionary in the same file
+	// it won't work if used in another class
 	private int size = 0;
 	private int count = 0;
 	private Ordering ordering = Ordering.NONE; // enum defined in Ordering.java. What does it do?
 
 	MyDictionary(int initialSize) { // Constructor
+		//  is like we give params to our class which can be used further.
 		records = new Record[initialSize]; // Create an array of 'size' to store the records
-		size = initialSize;
-		count = 0;
+		size = initialSize; // available size of Record class
+		count = 0; // no of records we stored
 	}
 
 	public Record get(AbstractRecord keyRecord) { // Return the record with the given key
-		for (Record record : records) {
+		for (Record record : records) { //  this syntax means for each record in record array
 			if (record.compare(keyRecord)==Comparison.MATCHING)
         // What happens if there are duplicate keys?
+				System.out.println("yes");
 				return record;
 		}
+		System.out.println("not found");
 		return null;
 	}
+	// Here return type is Record hence we use Record get
 
 	public void put(Record record) {
     // Insert the given record into the dictionary, if possible (due to size)
@@ -94,5 +100,7 @@ class MyDictionary {
 		}
 		System.out.println("");
 	}
+
+
 }
 
