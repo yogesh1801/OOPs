@@ -23,6 +23,7 @@ public class Main {
         // System.out.println(box0.weight); , cannot access weight though it is intialized
         // here Box is the super class
 
+
     }
 
 
