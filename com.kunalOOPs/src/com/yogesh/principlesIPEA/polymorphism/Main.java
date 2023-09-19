@@ -34,7 +34,7 @@ public class Main {
  *
  * // final keyword can prevent inheritance and polymorphism.
  *
- * can we override static method?
+ * can we override static method? no
  *
  * Encapsulation - Wrapping up the implementation of the data number and methods in the class
  * it hides it from the outside world.
